@@ -16,3 +16,8 @@ RUN apt-get update && \
 RUN virtual /myApp && \
     . /myApp/bin/activate && \
     pip instll pip -- upgrade
+
+# Define the entrypoint script
+ADD files/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /user/local/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
