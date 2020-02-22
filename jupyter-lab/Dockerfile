@@ -1,9 +1,9 @@
 FROM ubuntu:latest
 
-ENV http_proxy=http://clientproxy.corproot.net:8079
-ENV HTTP_PROXY=$http_proxy
-ENV https_proxy=$http_proxy
-ENV HTTPS_PROXY=$http_proxy
+#ENV http_proxy=http://clientproxy.corproot.net:8079
+#ENV HTTP_PROXY=$http_proxy
+#ENV https_proxy=$http_proxy
+#ENV HTTPS_PROXY=$http_proxy
 
 # Updating Ubuntu packages
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
